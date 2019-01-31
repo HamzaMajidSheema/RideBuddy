@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "896114565701",
+    "firebase_url": "https://ridebuddy-d24cd.firebaseio.com",
+    "project_id": "ridebuddy-d24cd",
+    "storage_bucket": "ridebuddy-d24cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896114565701:android:5646307484ee6873",
+        "android_client_info": {
+          "package_name": "com.easysawari.ridebuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896114565701-pcb21uf4b225k2rqd8em9hc1e3kfavf5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.easysawari.ridebuddy",
+            "certificate_hash": "eb0be1f1be10c1e94084ae4114376ace0e263a76"
+          }
+        },
+        {
+          "client_id": "896114565701-bvhqga13n6nk3elsdiu8qrp3qogd0vej.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.easysawari.ridebuddy",
+            "certificate_hash": "59a487b8e16e429d02748c49cd81cea3a23539dd"
+          }
+        },
+        {
+          "client_id": "896114565701-u8jmkqn25tdq9ke187idv74pekcr5ark.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAIT7q7FbSPd5kgSlGJU2qo20jYqqxCBE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896114565701-u8jmkqn25tdq9ke187idv74pekcr5ark.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
