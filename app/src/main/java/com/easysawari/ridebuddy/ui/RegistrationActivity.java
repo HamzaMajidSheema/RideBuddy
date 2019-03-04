@@ -27,6 +27,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private EditText lastName;
     private String UID;
     private Button Registerbtn;
+    private User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,15 +37,27 @@ public class RegistrationActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
         UID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-        User user = new User();
-        user.userId = UID;
-        user.firstName = String.valueOf(firstName.getText());
-        user.lastName = String.valueOf(lastName.getText());
-        user.mobileNumber = getIntent().getStringExtra("phoneNumber");
-
         Registerbtn = findViewById(R.id.Registerbtn);
 
-        RideSharer.RideSharerSignUp(RegistrationActivity.this,Registerbtn,mDatabase,user);
+        RideSharer.RideSharerSignUp(RegistrationActivity.this,mDatabase,UID);
+
+        Registerbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                user = new User();
+                user.userId = UID;
+                user.firstName = String.valueOf(firstName.getText());
+                user.lastName = String.valueOf(lastName.getText());
+                user.mobileNumber = getIntent().getStringExtra("phoneNumber");
+                mDatabase.child("users")
+                        .child(user.userId)
+                        .setValue(user);
+
+                Intent intent = new Intent(RegistrationActivity.this, Home.class);
+                startActivity(intent);
+
+            }
+        });
 
 
 

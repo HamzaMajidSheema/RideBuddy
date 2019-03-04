@@ -20,7 +20,7 @@ public class SplashScreenActivity extends Activity {
             @Override
             public void run() {
                 if (FirebaseAuth.getInstance().getCurrentUser() != null) {
-                    Intent intent = new Intent(SplashScreenActivity.this, ProfileActivity.class);
+                    Intent intent = new Intent(SplashScreenActivity.this, Home.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
                     startActivity(intent);

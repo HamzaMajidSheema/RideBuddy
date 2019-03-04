@@ -53,7 +53,13 @@
             android:name=".ui.LoginActivity"
             android:label="@string/title_activity_login" />
         <activity android:name=".ui.VerifyPhoneActivity" />
-        <activity android:name=".ui.RegistrationActivity"></activity>
+        <activity android:name=".ui.RegistrationActivity" />
+        <activity
+            android:name=".ui.Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.MyAccountActivity" />
+        <activity android:name=".ui.RidesInfoActivity"></activity>
     </application>
 
 </manifest>

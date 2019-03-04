@@ -1,0 +1,14 @@
+package com.easysawari.ridebuddy.ui;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import com.easysawari.ridebuddy.R;
+
+public class RidesInfoActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_rides_info);
+    }
+}

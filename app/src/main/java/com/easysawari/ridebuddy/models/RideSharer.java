@@ -6,8 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.easysawari.ridebuddy.Utils.PhoneAuth;
+import com.easysawari.ridebuddy.ui.Home;
 import com.easysawari.ridebuddy.ui.ProfileActivity;
 import com.easysawari.ridebuddy.ui.RegistrationActivity;
 import com.google.firebase.database.DataSnapshot;
@@ -26,10 +28,10 @@ public class RideSharer {
         user = new User();
     }
 
-    public static void RideSharerSignUp(final Activity activity, Button signUp, final DatabaseReference mDatabase, final User user)
+    public static void RideSharerSignUp(final Activity activity, final DatabaseReference mDatabase,String UID)
     {
         mDatabase.child("users")
-                .child(user.userId)
+                .child(UID)
                 .addListenerForSingleValueEvent(new ValueEventListener() {
 
                     @Override
@@ -39,8 +41,10 @@ public class RideSharer {
 
                         if(user != null)
                         {
-                            Intent intent = new Intent(activity, ProfileActivity.class);
+                            Intent intent = new Intent(activity, Home.class);
                             activity.startActivity(intent);
+
+                            Toast.makeText(activity, "User Already exists. Logging in instead of signing up",Toast.LENGTH_LONG).show();
                         }
                     }
 
@@ -52,18 +56,7 @@ public class RideSharer {
                 });
 
 
-        signUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mDatabase.child("users")
-                        .child(user.userId)
-                        .setValue(user);
 
-                Intent intent = new Intent(activity, ProfileActivity.class);
-                activity.startActivity(intent);
-
-            }
-        });
 
 
 
