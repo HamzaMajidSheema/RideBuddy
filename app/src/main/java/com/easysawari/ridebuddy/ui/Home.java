@@ -224,7 +224,15 @@ public class Home extends AppCompatActivity
 
             Toast.makeText(this, "Here you can view your Rides details",Toast.LENGTH_SHORT).show();
 
-        } else if (id == R.id.nav_logout) {
+        }
+        else if (id == R.id.nav_schedule) {
+
+            Intent intent = new Intent(Home.this, ScheduleActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_logout) {
             FirebaseAuth.getInstance().signOut();
 
             Intent intent = new Intent(Home.this, WelcomeScreen.class);

@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rey.material.widget.RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ScheduleActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <com.rey.material.widget.RelativeLayout
+            android:id="@+id/sundaybox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Sunday"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="Sunday"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="55dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Departure"
+                android:layout_below="@+id/Sunday"
+                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/textView6"
+                android:ems="10"
+                android:hint="HH"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:ems="10"
+                android:hint="MM"
+                android:maxLength="2"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/editText"
+                android:textAlignment="center"
+                android:inputType="time"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/editText2"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <TextView
+                android:id="@+id/Return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="20dp"
+                android:text="Return"
+                android:layout_below="@+id/textView6"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:ems="10"
+                android:hint="HH"
+                android:maxLength="2"
+                android:layout_toEndOf="@id/Return"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="21dp"
+                android:textAlignment="center"
+                android:inputType="time"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:ems="10"
+                android:hint="MM"
+                android:maxLength="2"
+                android:layout_marginTop="60dp"
+                android:layout_toEndOf="@+id/editText4"
+                android:textAlignment="center"
+                android:inputType="time"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/editText5"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+
+
+        </com.rey.material.widget.RelativeLayout>
+
+        <com.rey.material.widget.RelativeLayout
+            android:id="@+id/mondaybox"
+            android:layout_below="@+id/sundaybox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Monday"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="Monday"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="55dp" />
+
+            <TextView
+                android:id="@+id/mdeparture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Departure"
+                android:layout_below="@+id/Monday"
+                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/mhour"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/mdeparture"
+                android:ems="10"
+                android:hint="HH"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/mminute"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/mhour"
+                android:ems="10"
+                android:hint="MM"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/mformat"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/mminute"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <TextView
+                android:id="@+id/mReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="20dp"
+                android:text="Return"
+                android:layout_below="@+id/mdeparture"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/mhour2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/mReturn"
+                android:ems="10"
+                android:hint="HH"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/mminute2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/mhour2"
+                android:ems="10"
+                android:hint="MM"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/mformat2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/mminute2"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+        </com.rey.material.widget.RelativeLayout>
+
+        <com.rey.material.widget.RelativeLayout
+            android:id="@+id/tuesdaybox"
+            android:layout_below="@+id/mondaybox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Tuesday"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="Tuesday"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="55dp" />
+
+            <TextView
+                android:id="@+id/tdeparture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Departure"
+                android:layout_below="@+id/Tuesday"
+                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/thour"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/tdeparture"
+                android:ems="10"
+                android:maxLength="2"
+                android:hint="HH"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/tminute"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/thour"
+                android:ems="10"
+                android:maxLength="2"
+                android:hint="MM"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/tformat"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/tminute"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <TextView
+                android:id="@+id/tReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="20dp"
+                android:text="Return"
+                android:layout_below="@+id/tdeparture"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/thour2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/tReturn"
+                android:ems="10"
+                android:maxLength="2"
+                android:hint="HH"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/tminute2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/thour2"
+                android:ems="10"
+                android:hint="MM"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/tformat2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/tminute2"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+        </com.rey.material.widget.RelativeLayout>
+
+        <com.rey.material.widget.RelativeLayout
+            android:id="@+id/wednesdaybox"
+            android:layout_below="@+id/tuesdaybox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Wednesday"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="Wednesday"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="55dp" />
+
+            <TextView
+                android:id="@+id/wdeparture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Departure"
+                android:layout_below="@+id/Wednesday"
+                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/whour"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/wdeparture"
+                android:ems="10"
+                android:hint="HH"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/wminute"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/whour"
+                android:ems="10"
+                android:hint="MM"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/wformat"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/wminute"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text|time"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <TextView
+                android:id="@+id/wReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="20dp"
+                android:text="Return"
+                android:layout_below="@+id/wdeparture"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/whour2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/wReturn"
+                android:ems="10"
+                android:hint="HH"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/wminute2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/whour2"
+                android:ems="10"
+                android:hint="MM"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/wformat2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/wminute2"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+        </com.rey.material.widget.RelativeLayout>
+
+        <com.rey.material.widget.RelativeLayout
+            android:id="@+id/thursdaybox"
+            android:layout_below="@+id/wednesdaybox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Thursday"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="Thursday"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="55dp" />
+
+            <TextView
+                android:id="@+id/thdeparture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Departure"
+                android:layout_below="@+id/Thursday"
+                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/thhour"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/thdeparture"
+                android:ems="10"
+                android:hint="HH"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/thminute"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/thhour"
+                android:ems="10"
+                android:hint="MM"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/thformat"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/thminute"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <TextView
+                android:id="@+id/thReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="20dp"
+                android:text="Return"
+                android:layout_below="@+id/thdeparture"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/thhour2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/thReturn"
+                android:ems="10"
+                android:hint="HH"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/thminute2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/thhour2"
+                android:ems="10"
+                android:hint="MM"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/thformat2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/thminute2"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+        </com.rey.material.widget.RelativeLayout>
+
+        <com.rey.material.widget.RelativeLayout
+            android:id="@+id/fridaybox"
+            android:layout_below="@+id/thursdaybox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Friday"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="Friday"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="55dp" />
+
+            <TextView
+                android:id="@+id/fdeparture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Departure"
+                android:layout_below="@+id/Friday"
+                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/fhour"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/fdeparture"
+                android:ems="10"
+                android:hint="HH"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/fminute"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/fhour"
+                android:ems="10"
+                android:hint="MM"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/fformat"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/fminute"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <TextView
+                android:id="@+id/fReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="20dp"
+                android:text="Return"
+                android:layout_below="@+id/fdeparture"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/fhour2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/fReturn"
+                android:ems="10"
+                android:hint="HH"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/fminute2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/fhour2"
+                android:ems="10"
+                android:hint="MM"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/fformat2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/fminute2"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+        </com.rey.material.widget.RelativeLayout>
+
+        <com.rey.material.widget.RelativeLayout
+            android:id="@+id/saturdaybox"
+            android:layout_below="@+id/fridaybox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Saturday"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="Saturday"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="55dp" />
+
+            <TextView
+                android:id="@+id/ssdeparture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Departure"
+                android:layout_below="@+id/Saturday"
+                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/sshour"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/ssdeparture"
+                android:ems="10"
+                android:hint="HH"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/ssminute"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/sshour"
+                android:ems="10"
+                android:hint="MM"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/ssformat"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/ssminute"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <TextView
+                android:id="@+id/ssReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="20dp"
+                android:text="Return"
+                android:layout_below="@+id/ssdeparture"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <EditText
+                android:id="@+id/sshour2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/ssReturn"
+                android:ems="10"
+                android:hint="HH"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/ssminute2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/sshour2"
+                android:ems="10"
+                android:hint="MM"
+                android:maxLength="2"
+                android:inputType="time"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <EditText
+                android:id="@+id/ssformat2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/ssminute2"
+                android:ems="10"
+                android:hint="AM"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="88dp" />
+
+
+        </com.rey.material.widget.RelativeLayout>
+
+            <com.rey.material.widget.RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/Submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Submit" />
+            </com.rey.material.widget.RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+</com.rey.material.widget.RelativeLayout>

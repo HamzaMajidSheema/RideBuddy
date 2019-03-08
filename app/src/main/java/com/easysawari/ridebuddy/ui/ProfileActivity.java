@@ -260,6 +260,13 @@ public class ProfileActivity extends AppCompatActivity
         if(id==R.id.nav_settings)
         {
             Toast.makeText(this, "Currently there are no settings associated with any account",Toast.LENGTH_SHORT).show();
+
+
+               }
+
+        if(id==R.id.nav_schedule)
+        {
+
         }
 
         if(id==R.id.nav_logout)
@@ -271,6 +278,8 @@ public class ProfileActivity extends AppCompatActivity
 
             startActivity(intent);
         }
+
+
         return false;
     }
 }
