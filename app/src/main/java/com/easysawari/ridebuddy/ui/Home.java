@@ -13,8 +13,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
@@ -29,8 +27,6 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.easysawari.ridebuddy.Fragments.SearchFragment;
 import com.easysawari.ridebuddy.R;
 
 import com.easysawari.ridebuddy.models.User;
@@ -134,9 +130,6 @@ public class Home extends AppCompatActivity
             }
         });
 
-        loadFragment(new SearchFragment());
-
-        /*
         //Destination finding
         placeDestination = (PlaceAutocompleteFragment) getFragmentManager().findFragmentById(R.id.place_destination);
         placeLocation = (PlaceAutocompleteFragment) getFragmentManager().findFragmentById(R.id.place_location);
@@ -180,17 +173,9 @@ public class Home extends AppCompatActivity
 
             }
         });
-*/
+
     }
 
-
-    public void loadFragment(Fragment fragment) {
-        // load fragment
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
-    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
