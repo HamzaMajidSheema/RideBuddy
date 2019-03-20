@@ -66,7 +66,7 @@ public class Home extends AppCompatActivity
     Location mLastLocation;
     Marker mCurrLocationMarker;
     Button btnPickup;
-    TextView userName;
+    private TextView userName,useType;
 
 
     PlaceAutocompleteFragment placeLocation , placeDestination;
@@ -79,6 +79,12 @@ public class Home extends AppCompatActivity
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        //get user info from the Registration activity
+        Intent intent=getIntent();
+        final String u_username=intent.getStringExtra("key1");
+        final String u_email=intent.getStringExtra("key2");
+        final String u_type=intent.getStringExtra("key3");
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -89,6 +95,41 @@ public class Home extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        //Setting the value from the intent to the navigation header
+        View header=navigationView.getHeaderView(0);
+        userName=(TextView)header.findViewById(R.id.userName);
+        useType=(TextView)header.findViewById(R.id.tv_type);
+        userName.setText(u_username);
+        useType.setText(u_type);
+        header.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(u_type.equals("RideOwner"))
+                {
+                    Intent intent1=new Intent(Home.this,RIdeOwner.class);
+                    intent1.putExtra("key1",u_username);
+                    intent1.putExtra("key2",u_email);
+                    intent1.putExtra("key3",u_type);
+                    startActivity(intent1);
+
+                }
+                else if (u_type.equals("Customer")){
+                    Intent intent3=new Intent(Home.this,Customer.class);
+                    intent3.putExtra("key1",u_username);
+                    intent3.putExtra("key2",u_email);
+                    intent3.putExtra("key3",u_type);
+                    startActivity(intent3);
+
+                }
+                else if (u_type.isEmpty())
+                {
+                    Toast.makeText(Home.this,"You Must be login as Ride Owner or Customer to perform any action",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
+
 // get user name
       /*  userName = (TextView) findViewById(R.id.userName);
         String UID = FirebaseAuth.getInstance().getCurrentUser().getUid();

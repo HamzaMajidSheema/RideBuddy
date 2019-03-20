@@ -45,7 +45,7 @@ public class MyAccountActivity extends AppCompatActivity {
 
                         User user = dataSnapshot.getValue(User.class);
                        firstName.setText(user.firstName);
-                       lastName.setText(user.lastName);
+                       lastName.setText(user.user_email);
                        phoneNumber.setText(user.mobileNumber);
 
 

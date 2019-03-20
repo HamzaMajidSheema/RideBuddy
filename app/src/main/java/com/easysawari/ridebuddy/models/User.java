@@ -9,7 +9,9 @@ import android.location.Address;
 public class User {
    public String userId;
    public String firstName;
-   public String lastName;
+   public String user_email;
+   public String user_password;
+   public String userTyper;
    public String mobileNumber;
 
 }
