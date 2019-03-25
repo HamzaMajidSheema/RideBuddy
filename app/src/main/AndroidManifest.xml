@@ -22,7 +22,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.SeeSchedule"></activity>
+        <activity android:name=".ui.UpdateTrip"></activity>
+        <activity android:name=".ui.SeeSchedule" />
         <activity android:name=".ui.SetSchedule" />
         <activity android:name=".ui.PinConfimation" />
         <activity android:name=".ui.Customer" />
