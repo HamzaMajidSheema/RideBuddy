@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="50">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:weightSum="50">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginTop="28dp"
+            android:paddingBottom="20dp" />
+
+        <TextView
+            android:id="@+id/tv_useremail"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginTop="28dp"
+            android:paddingBottom="20dp" />
+
+        <TextView
+            android:id="@+id/tv_usertype"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginTop="28dp"
+            android:paddingBottom="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="423dp"
+        android:orientation="vertical"
+        android:weightSum="50"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="320dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Update Profile"
+            android:id="@+id/btn_updateProfile"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Set Sechdule"
+            android:id="@+id/btn_setSecdule"
+            android:layout_marginTop="10dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="See Sechdule"
+            android:id="@+id/btn_SeeSchedule"
+            android:layout_marginTop="10dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Sign Out"
+            android:id="@+id/btn_SignOut"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+
+</LinearLayout>
