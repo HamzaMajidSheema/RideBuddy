@@ -19,7 +19,7 @@ public class WelcomeScreen extends Activity {
     }
 
     public void onClientClick(View view) {
-        Intent intent = new Intent(this, RegistrationActivity.class);
+        Intent intent = new Intent(this, Home.class);
         startActivity(intent);
     }
 

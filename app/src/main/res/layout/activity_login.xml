@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.LoginActivity">
+    tools:context=".ui.LoginActivity"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView"
@@ -12,27 +13,49 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Enter your phone number"
+        android:text="Log In "
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center"/>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="15dp">
 
         <EditText
             android:id="@+id/editTextPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+
             android:digits="0123456789"
-            android:hint="312 3456789"
-            android:inputType="phone"
-            android:maxLength="10" />
+            android:hint="Enter Phone Number or Email Address"
+            android:inputType="text"
+             />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ed_LogPass"
+            android:paddingTop="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter the PassWord"
+            android:inputType="textPassword"
+            />
+        <Spinner
+
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:entries="@array/user_arrays"
+            android:layout_gravity="center"
+            android:prompt="@string/user_prompt"
+            android:id="@+id/sp_LogInType"
+            android:paddingTop="10dp"
+            android:layout_marginTop="10dp">
+
+        </Spinner>
 
     </LinearLayout>
 
@@ -43,8 +66,21 @@
         android:layout_below="@id/linearLayout"
         android:layout_centerHorizontal="true"
         android:background="@color/colorPrimary"
-        android:text="Continue"
+        android:text="Log In"
         android:textAllCaps="false"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/btn_UserRegister"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:text="Sign Up"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"/>
 
-</RelativeLayout>
+</LinearLayout>

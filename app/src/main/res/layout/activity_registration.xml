@@ -57,7 +57,7 @@
 
         android:layout_gravity="center"
         android:ems="10"
-        android:hint="Password"
+        android:hint="Phone Number"
 
 
         android:inputType="phone" />

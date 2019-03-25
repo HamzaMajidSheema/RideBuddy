@@ -13,5 +13,6 @@ public class User {
    public String user_password;
    public String userTyper;
    public String mobileNumber;
+   public double rating;
 
 }

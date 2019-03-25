@@ -12,6 +12,8 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +22,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Customer"></activity>
+        <activity android:name=".ui.SeeSchedule"></activity>
+        <activity android:name=".ui.SetSchedule" />
+        <activity android:name=".ui.PinConfimation" />
+        <activity android:name=".ui.Customer" />
         <activity android:name=".ui.RIdeOwner" />
         <activity android:name=".ui.ScheduleActivity" />
         <!--
